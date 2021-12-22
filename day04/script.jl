@@ -38,7 +38,7 @@ function read_input(fn)
             data[i, :] = parse.(Int, split(readline(f), ' '; keepempty=false))
         end
 
-        append!(boards, [Board(data, falses(5, 5)),])
+        push!(boards, Board(data, falses(5, 5)))
     end
     close(f)
 
